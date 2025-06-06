@@ -8,11 +8,3 @@ variable "vm_pass" {
   description = "VM password"
   sensitive   = true
 }
-
-variable "resource_group_name" {
-  type = string
-}
-
-variable "location" {
-  type = string
-}
