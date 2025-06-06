@@ -54,7 +54,7 @@ disable_password_authentication = true
 
   admin_ssh_key {
     username   = "azureuser"
-    public_key = file("C:/Users/Rohith Kandikatla/.ssh/id_rsa.pub") # Path to your public SSH key
+    public_key = file("${path.module}/id_rsa.pub") # Path to your public SSH key
   }
 
   os_disk {
