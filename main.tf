@@ -46,7 +46,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   size                = "Standard_B1s"
-  admin_username      = var.vm_user
+  admin_username      = "azureuser"
   admin_password      = var.vm_pass
   network_interface_ids = [azurerm_network_interface.nic.id]
 
