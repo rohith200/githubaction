@@ -50,6 +50,13 @@ resource "azurerm_linux_virtual_machine" "vm" {
   admin_password      = var.vm_pass
   network_interface_ids = [azurerm_network_interface.nic.id]
 
+disable_password_authentication = true
+
+  admin_ssh_key {
+    username   = "azureuser"
+    public_key = file("C:/Users/Rohith Kandikatla/.ssh/id_rsa.pub") # Path to your public SSH key
+  }
+
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
